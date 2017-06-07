@@ -9,13 +9,13 @@
 </head>
 <body>
 	<aside id="janela">
-	<header>
+	<header id="cabecalho">
 		<div class="barup">
 			<img src="notepad.png">
 			<h1>Cartão de Visita - Bloco de notas</h1>
 			<div class="icon-barup">
 				<button onclick="min()">−</button>
-				<button>
+				<button onclick="max()">
 					<i class="material-icons" style="font-size:20px;">	check_box_outline_blank</i>
 				</button>
 				<button onclick="min()">
@@ -31,7 +31,7 @@
 			<li>Aj<span>u</span>da</li>
 		</ul>
 	</header>
-	<main>
+	<main id="dados">
 		<p>&lt;card&gt;</p>
 		<div class="dados">
 			<div>
@@ -102,24 +102,27 @@
 		<div>
 			<i class="material-icons" style="font-size:20px;color: #fff">search</i>
 		</div>
-		<button id="icone" onclick="open()">
-			<img src="notepad.png">
+		<button id="icone" onclick="abrir()">
+			<img src="notepad.png">		
 		</button>
 	</footer>
 	<script>
 		function min() {	
 			document.getElementById("janela").style.display = "none";
 		}
-
-		function open() {	
-			document.getElementById("janela").style.display = "block";
-			
-			// var x = document.getElementById("janela").style.display;
-			// if (x === "none") {
-			// 	document.getElementById("janela").style.display = "block";
-			// } else {
-			// 	// document.getElementById("icone").style.transition = "width 2s";
-			// }
+		// function max(){
+		// 	document.getElementById("janela").style.width = "100%";
+		// 	document.getElementById("janela").style.top = "0";
+		// 	document.getElementById("cabecalho").style.width = "100%";
+		// 	// document.getElementById("cabecalho").style.heigth = "100vh";
+		// 	document.getElementById("dados").style.width = "100%";
+		// 	document.getElementById("dados").style.height = "89vh";
+		// }
+		function abrir() {	
+			var x = document.getElementById("janela").style.display;
+			if (x === "none") {
+				document.getElementById("janela").style.display = "block";
+			} 
 		}
 	</script>
 </body>
