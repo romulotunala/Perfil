@@ -1,43 +1,183 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  position: relative;
+}
+	
+html, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
 
-nav ul li {
-	display: inline;
+body {
+	align-items: flex-start;
+	background: url("http://www.windowscentral.com/sites/wpcentral.com/files/styles/large/public/field/image/2015/06/windows-10-hero.jpg?itok=Dtu_g-7-") no-repeat right top fixed;
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+}
+
+p {
+	margin: 0;
+}
+aside {
+	border: solid 1px #5049FF;
+	display: block;
+}
+header * {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	/*border: solid 1px blue;*/
+	width: 100%;
 	background: #fff;
 }
-.icon {
-	width: 50px;
-}
-#foto{
-	width: 300px;
-	border-radius:50%;
-}
-body{
+
+header .barup {
 	display: flex;
-	background: black;
-	color: white;
-	align-content: center;
-	flex-flow: wrap;
-	justify-content: space-between;
-	text-align: center;
+	justify-content: flex-start;
+	align-items: center;
+	height: 30px;
+
 }
-header {
-	/*background: blue;*/
-	padding: 10px;
-	flex-grow: 1;
+
+.barup img {
+	width: 20px;
+	margin: 0 5px; 
 }
+
+.barup h1 {
+	margin: 0;
+	/*padding-bottom: 5px;*/
+	height: 30px;
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+	font-weight: 400;
+	font-family: verdana;
+}
+
+.icon-barup{
+	height: 30px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+}
+
+.icon-barup button{
+	width: 40px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+}
+.icon-barup button:last-child{
+	font-size: 10px;
+	font-weight: 600;
+}
+.icon-barup button:hover {
+	background: #B2AFA7;
+}
+
+.icon-barup button:last-child:hover {
+	background: #f00;
+	color: #fff;
+}
+
+header .menu{
+	display: flex;
+	justify-content: flex-start;
+	list-style-type: none;
+	padding: 0;
+	height: 30px;
+	align-items: flex-end;
+}
+
+header .menu li{
+	padding: 2px 10px 2px 10px;
+}
+
+header .menu li span{
+	text-decoration: underline;
+}
+
+header .menu li:hover {
+	background: rgba(121, 219, 196, 0.3);
+	border: solid rgba(121, 219, 196, 0.5) 1px;
+}
+
 main {
-	/*background: pink;*/
-	padding: 10px;
-	flex-grow: 1;
+	font-family: 'Lucida Console';
+	padding: 5px;
+	padding-bottom: 100px; 
+	overflow: scroll;
+	background: #fff;
+	border:solid 1px #5049FF;
+	box-shadow: 0px -1px 2px rgba(0,0,0,0.1);
 }
-main h1 {
-	color:;
+
+main p {
+	margin: 0;
+	margin-bottom:2px; 
+}
+
+.dados {
+	display: flex;
+	margin-left: 40px;
+}
+
+.dados div {
+	/*margin: 5px;*/
+}
+.dados .info {
+	padding: 0 10px;
+	font-weight: bold;
+}
+
+.redes {
+	align-self: flex-end;
+	margin-left: 40px;
 }
 footer {
-	/*position: fixed;*/
-	align-self: flex-end;
-	bottom: 0px;
-	background: red;
 	width: 100%;
-	height: 100px;
-	text-align: center;
+	height: 35px;
+	position: fixed;
+	bottom: 0;
+	background: #000;
+	display: flex;
+}
+footer div {
+	width: 4%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+footer div:hover, footer #icone:hover {
+	background: rgba(217,215,215, 0.5);
+}
+footer #icone{
+	background: transparent;
+    border: none;
+    text-decoration: none;
+    width: 4%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: solid #0ff 2px;
+}
+/*footer #icone:hover img{
+	width: 100%;
+}*/
+footer #icone img {
+	width: 90%;
 }

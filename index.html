@@ -4,36 +4,123 @@
 	<meta charset="utf-8">
 	<title>Rômulo Tunala</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+	<aside id="janela">
 	<header>
-		<img id=foto src="eu.jpg" alt="Minha Foto">
-		<nav>
-			<ul>
-				<li>
-					<a href="https://www.facebook.com/romulotunala" target="_blank"><img class="icon" src="facebook.ico" alt="Icone Facebook"></a>
-				</li>
-				<li>
-					<a href=""><img class="icon" src="Instagram.png" alt="Icone Instagram"></a>
-				</li>
-				<li>
-					<a href=""><img class="icon" src="twitter.ico" alt="Icone Twitter"></a>
-				</li>
-				<li>
-					<a href="http://codepen.io/romulotunala/" target=""><img class="icon" src="codepen.png" alt="Icone Codepen"></a>
-				</li>
-				<li>
-					<a href=""><img class="icon" src="YouTube.ico" alt="Icone Youtube"></a>
-				</li>
-			</ul>
-		</nav>
+		<div class="barup">
+			<img src="notepad.png">
+			<h1>Cartão de Visita - Bloco de notas</h1>
+			<div class="icon-barup">
+				<button onclick="min()">−</button>
+				<button>
+					<i class="material-icons" style="font-size:20px;">	check_box_outline_blank</i>
+				</button>
+				<button onclick="min()">
+					<i class="material-icons" style="font-size:20px;">close</i>
+				</button>
+			</div>
+		</div>
+		<ul class="menu">
+			<li><span>A</span>rquivo</li>
+			<li><span>E</span>ditar</li>
+			<li><span>F</span>ormatar</li>
+			<li>E<span>x</span>ibir</li>
+			<li>Aj<span>u</span>da</li>
+		</ul>
 	</header>
 	<main>
-		<h1>Rômulo Tunala</h1>
-		<p>Esse sou eu!!!</p>
+		<p>&lt;card&gt;</p>
+		<div class="dados">
+			<div>
+				<p>&lt;nome&gt;</p>
+				<p>&lt;formação&gt;</p>
+				<p>&lt;email&gt;</p>
+			</div>
+			<div class="info">
+				<p>Rômulo Tunala</p>
+				<p>Sistemas de Informação</p>
+				<p>romulotunala@gmail.com</p>
+			</div>
+			<div>
+				<p>&lt;/nome&gt;</p>
+				<p>&lt;/formação&gt;</p>
+				<p>&lt;/email&gt;</p>
+			</div>
+		</div>
+		<div class="redes">
+			<p>&lt;redes&gt;</p>
+			<div class="dados">
+					<div>
+						<p>&lt;social&gt;</p>
+						<p>&lt;social&gt;</p>
+						<p>&lt;social&gt;</p>
+						<p>&lt;social&gt;</p>
+						<p>&lt;social&gt;</p>
+						<p>&lt;social&gt;</p>
+					</div>
+					<div class="info">
+						<p>
+							<a href="https://www.facebook.com/romulotunala" target="_blank">facebook.com</a>
+						</p>
+						<p>
+							<a href="https://www.instagram.com/romulotunala/?hl=pt-br" target="_blank">instagram.com</a>
+						</p>
+						<p>
+							<a href="http://www.polishop.vc/store/polishop?utm_source=PolishopComVC&utm_campaign=23917&utm_medium=polishop" target="_blank">polishop.com.vc</a>
+						</p>
+						<p>
+							<a href="https://www.linkedin.com/in/r%C3%B4mulo-tunala-186b9946/" target="_blank">linkedin.com</a>
+						</p>
+						<p>
+							<a href="https://codepen.io/romulotunala/" target="_blank">codepen.io</a>
+						</p>
+						<p>
+							<a href="https://github.com/romulotunala" target="_blank">github.com</a>
+						</p>
+					</div>
+					<div>
+						<p>&lt;/social&gt;</p>
+						<p>&lt;/social&gt;</p>
+						<p>&lt;/social&gt;</p>
+						<p>&lt;/social&gt;</p>
+						<p>&lt;/social&gt;</p>
+						<p>&lt;/social&gt;</p>
+					</div>
+			</div>
+			<p>&lt;/redes&gt;</p>
+		</div>
+		<p>&lt;/card&gt;</p>
 	</main>
+	</aside>
 	<footer>
-		Feito por mim! #VaiNaWeb
+		<div>
+			<i class="fa fa-windows" style="font-size:20px;color:#fff;"></i>
+		</div>
+		<div>
+			<i class="material-icons" style="font-size:20px;color: #fff">search</i>
+		</div>
+		<button id="icone" onclick="open()">
+			<img src="notepad.png">
+		</button>
 	</footer>
+	<script>
+		function min() {	
+			document.getElementById("janela").style.display = "none";
+		}
+
+		function open() {	
+			document.getElementById("janela").style.display = "block";
+			
+			// var x = document.getElementById("janela").style.display;
+			// if (x === "none") {
+			// 	document.getElementById("janela").style.display = "block";
+			// } else {
+			// 	// document.getElementById("icone").style.transition = "width 2s";
+			// }
+		}
+	</script>
 </body>
 </html>
